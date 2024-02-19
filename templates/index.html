@@ -9,16 +9,44 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <style>
-      #image-preview {
-        max-width: 300px;
-        margin-top: 20px;
+      body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
       }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      #image-preview {
+        max-width: 100%;
+        margin-top: 20px;
+        display: none;
+      }
+
       .color-box {
         width: 50px;
         height: 50px;
         display: inline-block;
         margin: 5px;
         border: 1px solid #333;
+      }
+
+      #color-palette {
+        margin-top: 20px;
+        text-align: center;
       }
     </style>
   </head>

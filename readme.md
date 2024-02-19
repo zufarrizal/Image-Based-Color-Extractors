@@ -1,1 +1,1 @@
-Anda dapat menjalankan server Flask dengan mengetikkan python app.py dalam terminal setelah menyimpan kode backend di dalam file app.py. Kemudian, akses http://localhost:5000 dalam browser untuk melihat website ekstraktor warna berbasis gambar yang telah dibuat.
+You can run the Flask server by typing python app.py in the terminal after saving the backend code in the app.py file. Then, access http://localhost:5000 in a browser to see the image-based color extractor website that has been created.
