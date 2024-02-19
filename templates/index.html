@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Extractor</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      #image-preview {
+        max-width: 300px;
+        margin-top: 20px;
+      }
+      .color-box {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin: 5px;
+        border: 1px solid #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mt-5">Image Color Extractor</h1>
+      <input type="file" id="file-input" class="form-control mt-3" />
+      <div id="image-preview"></div>
+      <input
+        type="number"
+        id="num-colors"
+        class="form-control mt-3"
+        placeholder="Number of Colors"
+      />
+      <button id="extract-btn" class="btn btn-primary mt-3">
+        Extract Colors
+      </button>
+      <div id="color-palette" class="mt-3"></div>
+    </div>
+
+    <script>
+      document
+        .getElementById("extract-btn")
+        .addEventListener("click", function () {
+          var fileInput = document.getElementById("file-input");
+          var numColors = document.getElementById("num-colors").value;
+          var formData = new FormData();
+          formData.append("file", fileInput.files[0]);
+          formData.append("num_colors", numColors);
+
+          fetch("/extract", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              var colorPaletteDiv = document.getElementById("color-palette");
+              colorPaletteDiv.innerHTML = "";
+              data.colors.forEach((color) => {
+                var colorBox = document.createElement("div");
+                colorBox.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+                colorBox.className = "color-box";
+                colorPaletteDiv.appendChild(colorBox);
+              });
+            })
+            .catch((error) => console.error("Error:", error));
+        });
+    </script>
+  </body>
+</html>
