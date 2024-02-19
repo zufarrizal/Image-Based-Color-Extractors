@@ -69,6 +69,23 @@
 
     <script>
       document
+        .getElementById("file-input")
+        .addEventListener("change", function (event) {
+          var input = event.target;
+          var reader = new FileReader();
+
+          reader.onload = function () {
+            var dataURL = reader.result;
+            var imagePreview = document.getElementById("image-preview");
+            imagePreview.innerHTML =
+              "<img src='" + dataURL + "' style='max-width: 100%;' />";
+            imagePreview.style.display = "block";
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        });
+
+      document
         .getElementById("extract-btn")
         .addEventListener("click", function () {
           var fileInput = document.getElementById("file-input");
